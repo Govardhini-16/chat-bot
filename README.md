@@ -4,7 +4,7 @@ A simple AI-powered chat application with Flask backend, MongoDB database, and r
 
 ## Features
 
-✨ **Core Features:**
+ **Core Features:**
 - Real-time chat with Claude AI (Anthropic)
 - Chat history persistence with MongoDB
 - Clean, responsive UI with modern design
@@ -13,7 +13,7 @@ A simple AI-powered chat application with Flask backend, MongoDB database, and r
 - Error handling and validation
 - Environment-based configuration (no hardcoded secrets)
 
-🎯 **Bonus Features:**
+ **Bonus Features:**
 - Beautiful gradient UI with responsive design
 - Typing indicators with animations
 - Proper message timestamps
@@ -186,11 +186,11 @@ Clear all conversation history
 ## AI Model Choice: Anthropic Claude API
 
 ### Why Claude?
-- ✅ **Free Tier:** 100K tokens per month free (generous for learning and testing)
-- ✅ **Quality:** State-of-the-art reasoning and text generation capabilities
-- ✅ **Reliability:** Highly stable and well-maintained API
-- ✅ **Easy Setup:** Simple SDK with excellent documentation
-- ✅ **No Credit Card Required:** Free tier available without signup hassle
+-  **Free Tier:** 100K tokens per month free (generous for learning and testing)
+-  **Quality:** State-of-the-art reasoning and text generation capabilities
+-  **Reliability:** Highly stable and well-maintained API
+-  **Easy Setup:** Simple SDK with excellent documentation
+-  **No Credit Card Required:** Free tier available without signup hassle
 
 ### Alternative Options
 If you want to use a different AI model:
@@ -263,20 +263,6 @@ The application includes comprehensive error handling:
 - [ ] Dark mode toggle
 - [ ] Deployment to Heroku/Railway/Vercel
 
-## Troubleshooting
-
-### Q: "Failed to connect to MongoDB"
-**A:** Ensure MongoDB is running. For local setup, check if mongod service is started.
-
-### Q: "ANTHROPIC_API_KEY not found"
-**A:** Make sure you've created `.env` file and added your API key. The app won't work without it.
-
-### Q: "CORS error in browser console"
-**A:** The Flask app should be running on `localhost:5000`. If you're accessing it differently, update the API_URL in script.js.
-
-### Q: "Messages not saving to database"
-**A:** Check MongoDB connection string in `.env` and ensure MongoDB is running.
-
 ## License
 
 This project is open source and free to use for educational purposes.
@@ -291,4 +277,4 @@ For issues or questions:
 
 ---
 
-**Happy Chatting! 🚀**
+**Happy Chatting!**
