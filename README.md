@@ -97,13 +97,13 @@ pip install -r requirements.txt
 
 Edit `.env` file and add:
 ```env
-ANTHROPIC_API_KEY=your_api_key_here
+NVIDIA_API_KEY=your_api_key_here
 MONGODB_URI=mongodb://localhost:27017
 DATABASE_NAME=chatbot
 COLLECTION_NAME=conversations
 ```
 
-Replace `your_api_key_here` with your actual Claude API key.
+Replace `your_api_key_here` with your actual Nvidia API key.
 
 ### 7. Run the Application
 
