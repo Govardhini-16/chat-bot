@@ -5,7 +5,7 @@ A simple AI-powered chat application with Flask backend, MongoDB database, and r
 ## Features
 
  **Core Features:**
-- Real-time chat with Claude AI (Anthropic)
+- Real-time chat with chat-bot
 - Chat history persistence with MongoDB
 - Clean, responsive UI with modern design
 - Loading indicators and typing animations
@@ -26,7 +26,7 @@ A simple AI-powered chat application with Flask backend, MongoDB database, and r
 - **Flask** - Web framework
 - **Flask-CORS** - Cross-origin resource sharing
 - **MongoDB** - NoSQL database for chat history
-- **Anthropic Claude API** - AI model for chat responses
+- **Nvidia API** - AI model for chat responses
 
 ### Frontend
 - **HTML5** - Semantic markup
@@ -37,7 +37,7 @@ A simple AI-powered chat application with Flask backend, MongoDB database, and r
 
 - Python 3.8 or higher
 - MongoDB (local installation or MongoDB Atlas free tier)
-- Anthropic Claude API key (free tier available)
+- Nvidia API key (free tier available)
 
 ## Setup Instructions
 
@@ -87,9 +87,9 @@ pip install -r requirements.txt
 3. Get connection string: `mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority`
 4. Use this as MONGODB_URI in `.env`
 
-### 5. Get Anthropic Claude API Key
+### 5. Get NVIDIA API Key
 
-1. Visit https://console.anthropic.com/account/keys
+1. Visit [https://build.nvidia.com/]
 2. Create a new API key
 3. Copy the API key
 
@@ -183,14 +183,14 @@ Clear all conversation history
 3. **Clear History:** Click the "Clear History" button to delete all conversations
 4. **Message Timestamps:** Each message shows the time it was sent
 
-## AI Model Choice: Anthropic Claude API
+## AI Model Choice: Nvidia API
 
-### Why Claude?
--  **Free Tier:** 100K tokens per month free (generous for learning and testing)
--  **Quality:** State-of-the-art reasoning and text generation capabilities
--  **Reliability:** Highly stable and well-maintained API
--  **Easy Setup:** Simple SDK with excellent documentation
--  **No Credit Card Required:** Free tier available without signup hassle
+### Why NVIDIA API?
+-  **High Performance**: Provides fast inference using optimized GPU infrastructure
+-  **Model Variety**: Supports powerful open-source models like LLaMA, Mistral, and Qwen
+-  **OpenAI-Compatible Interface**: Easy integration using familiar OpenAI-style APIs
+-  **Scalability**: Designed for efficient handling of AI workloads
+-  **Flexibility**: Allows access to multiple models through a single platform
 
 ### Alternative Options
 If you want to use a different AI model:
@@ -230,8 +230,8 @@ groq
 - **Solution:** Implemented Flask-CORS to handle cross-origin requests
 
 ### 3. **API Rate Limiting**
-- **Challenge:** Gemini API has rate limits
-- **Solution:** Added proper error handling and user feedback for failed requests
+- **Challenge:** Handling failures or unavailability of the NVIDIA AI API
+- **Solution:** Implemented proper error handling to return meaningful messages when the AI service is unavailable or returns an error
 
 ### 4. **Chat State Management**
 - **Challenge:** Keeping chat history in sync between frontend and database
@@ -266,14 +266,6 @@ The application includes comprehensive error handling:
 ## License
 
 This project is open source and free to use for educational purposes.
-
-## Support
-
-For issues or questions:
-1. Check the Troubleshooting section
-2. Review error messages in browser console (F12)
-3. Check Flask server logs for backend errors
-4. Verify all credentials in `.env` file
 
 ---
 
